@@ -36,7 +36,7 @@ Text('chukwukasuccess0@gmail.com' , style: TextStyle(fontStyle:FontStyle.italic,
 ]),
 
 Column(children: [
-  Icon(Icons.phone,
+  Icon(Icons.access_alarm,
   size: 150,),
   Text('08118477430', style: TextStyle(fontSize: 20),),
 ],)
