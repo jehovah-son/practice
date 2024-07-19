@@ -17,12 +17,16 @@ class Houses extends StatelessWidget {
     return  Scaffold(
      appBar: AppBar(
     
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor:Colors.lightBlue,
         
-        title: Text('houses for sale'),
+        title:const Text('houses for sale'),
       ),
-      body: const Column(
-        
+      body:   Container(
+       // color: Colors.black,
+      child: Column(children: [
+          Image.asset('assets/pic1.jpg')
+        ],
+    ),
         
       ),
   

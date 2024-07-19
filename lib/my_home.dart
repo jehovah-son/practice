@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:practice/houses.dart';
+
 
 
 class Home extends StatelessWidget {
@@ -10,21 +11,24 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(     // it provide with a base layout for our application with the option to hv app bar at the top for a tittle an icon ...
+    return  Scaffold(      // it provide with a base layout for our application with the option to hv app bar at the top for a tittle an icon ...
+     backgroundColor: Colors.lightBlue,
       appBar: AppBar(
-        title:const Text('sign up', style: TextStyle(color: Colors.white, )),
+        title:const Text('max gagdet', style: TextStyle(color: Colors.white, )),
+        leading: Image.asset('assets/img.png'),
         backgroundColor: Colors.brown[500],
-centerTitle: true,
+
       ),
 // write your body content under the app bar
 body:Container(
-  margin: EdgeInsets.all(20),
+  margin: const EdgeInsets.all(20),
   alignment: Alignment.topCenter,
-child:const Column(
+child:  Column(
+
 children:<Widget>[ 
-   Icon(Icons.person,
+  const Icon(Icons.person,
    size: 150,),
-  Text('Name:chukwuka-success' ,style:TextStyle(fontStyle: FontStyle.italic,
+  const Text('Name:chukwuka-success' ,style:TextStyle(fontStyle: FontStyle.italic,
   decoration: TextDecoration.underline,fontSize:20, ) ,),
   const Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,7 +52,13 @@ Column(children: [
     
     ),
 
-ElevatedButton(onPressed: null, child: Text('login'),),
+ ElevatedButton( style: ElevatedButton.styleFrom(backgroundColor: Colors.brown[800]),
+  onPressed:() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Houses()),
+            );
+          }, child: const Text('press me', style: TextStyle( color: Colors.lightBlue),)),
 
 ],
  ),
